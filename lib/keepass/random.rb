@@ -1,4 +1,4 @@
-require 'active_support/secure_random'
+require 'securerandom'
 
 module KeePass
   
@@ -14,7 +14,7 @@ module KeePass
     # @return [Integer|Float] the random number
     # @see ActiveSupport::SecureRandom#random_number
     def self.random_number(n = 0)
-      ActiveSupport::SecureRandom.random_number(n)
+      SecureRandom.random_number(n)
     end
     
     # Returns a randomly sampled item from the array.
@@ -36,3 +36,4 @@ module KeePass
   end
 
 end
+

@@ -5,12 +5,12 @@ describe KeePass::Random do
   describe "#random_number" do
     
     it "should use ActiveSupport::SecureRandom" do
-      ActiveSupport::SecureRandom.should_receive(:random_number).once.with(12)
+      SecureRandom.should_receive(:random_number).once.with(12)
       described_class.random_number(12)
     end
 
     it "should accept default argument" do
-      ActiveSupport::SecureRandom.should_receive(:random_number).with(0)
+      SecureRandom.should_receive(:random_number).with(0)
       described_class.random_number
     end
     
